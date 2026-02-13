@@ -642,27 +642,67 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 const whatsappNumber = "919464642218";
 
-const serviceCategories = [
-
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const select = document.getElementById("service");
-  if (!select) return;
+window.serviceCategories = [
 
-  serviceCategories.forEach(cat => {
-    const group = document.createElement("optgroup");
-    group.label = cat.category;
+{
+  category: "🚀 Trending AI & Productivity Tools",
+  items: [
+    { name:"Lovable Pro – 1 Year" },
+    { name:"N8N – Automation Tool" },
+    { name:"Gamma – AI Presentation Builder" },
+    { name:"ChatGPT (Own Email) – 3 Months" },
+    { name:"Descript – 1 Year" },
+    { name:"Bolt.new – AI Code & Docs Tool" },
+    { name:"LinkedIn Premium – 3 Months" },
+    { name:"ClickSites – Website Builder" },
+    { name:"Jasper AI – 1 Month" },
+    { name:"Replit Core – 1 Year" },
+    { name:"Warp – AI Terminal" },
+    { name:"Mobbin – UI/UX Design Library" },
+    { name:"Magic Patterns – AI Design Tool" },
+    { name:"Wispr – Voice AI" },
+    { name:"Granola – Meeting Notes AI" },
+    { name:"Superhuman – Smart Email" },
+    { name:"Linear – AI Project Management" },
+    { name:"Raycast – Productivity AI" },
+    { name:"BlackBox AI" }
+  ]
+},
 
-    cat.items.forEach(item => {
-      const option = document.createElement("option");
-      option.value = item.name;
-      option.textContent = item.name;
-      group.appendChild(option);
-    });
+{
+  category: "🛠 Other Premium Tools & Subscriptions",
+  items: [
+    { name:"Make.com" },
+    { name:"ChatGPT Plus – 3 Months" },
+    { name:"Canva Edu – 1 Year" },
+    { name:"Adobe Creative Cloud – 1 Month" },
+    { name:"Adobe Creative Cloud – 1 Year" },
+    { name:"ElevenLabs Creator – 3 Months" },
+    { name:"CorelDRAW Technical & Graphics Suite" },
+    { name:"CapCut Pro – 1 Month" },
+    { name:"ExpressVPN – 3 Months" },
+    { name:"Surfshark VPN – 2 Months" },
+    { name:"Notion Plus – 6 Months (AI)" },
+    { name:"Coursera Plus – 1 Year" },
+    { name:"TradingView Premium – 1 Month" },
+    { name:"Gemini Pro – 1 Year" },
+    { name:"Perplexity AI – 1 Year" },
+    { name:"Grammarly – 1 Year" },
+    { name:"QuillBot – 1 Year" },
+    { name:"Filmora – 1 Year" },
+    { name:"Envato Elements" },
+    { name:"Gemini AI Ultra – 1 Month" },
+    { name:"CorelDRAW Lifetime 2024" },
+    { name:"Autodesk – 1 / 3 Year" },
+    { name:"Canva Pro – 1 Year" },
+    { name:"Canva Pro – 500 Users (Admin)" },
+    { name:"DataCamp" },
+    { name:"CapCut Pro – Monthly" }
+  ]
+}
 
-    select.appendChild(group);
-  });
-});
+];
 </script>
 
 
