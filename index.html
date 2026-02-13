@@ -751,154 +751,99 @@ document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
 </a>
 
 <script>
-  const whatsappNumber = "919464642218";
-  const upiBase = "upi://pay?pa=hdfcbox@ybl&pn=NexAI%20Tech%20%26%20Digital%20Solutions%20%7C%20Powered%20by%20MeraPopi&cu=INR";
+const whatsappNumber = "919464642218";
 
-  const services = [
-  // ===== AI & AUTOMATION =====
-  { icon:"🤖", name:"AI Automation Setup", desc:"Integrate AI tools, chatbots, and workflows into your business.", price:4999 },
-  { icon:"💬", name:"AI Chatbots & Virtual Assistants", desc:"Customer support and sales automation chatbots.", price:5999 },
-  { icon:"🧠", name:"Machine Learning Solutions", desc:"Custom ML models for business intelligence and insights.", price:9999 },
-  { icon:"📊", name:"Predictive Analytics", desc:"Data-driven forecasting and business prediction models.", price:7999 },
-  { icon:"📷", name:"Computer Vision & OCR", desc:"Image recognition, OCR and document automation.", price:8999 },
-  { icon:"🗣️", name:"NLP Solutions", desc:"Text analysis, sentiment detection and language processing.", price:6999 },
+const serviceCategories = [
 
-  // ===== CLOUD & DEVOPS =====
-  { icon:"☁️", name:"Cloud Migration", desc:"Migrate infrastructure and apps to cloud platforms.", price:8999 },
-  { icon:"☁️", name:"AWS / Azure / GCP Solutions", desc:"Cloud architecture, deployment and optimization.", price:9999 },
-  { icon:"🔄", name:"DevOps & CI/CD Pipelines", desc:"Automated build, test and deployment pipelines.", price:7999 },
-  { icon:"📦", name:"Containerization & Kubernetes", desc:"Docker & Kubernetes orchestration solutions.", price:8999 },
-  { icon:"💾", name:"Backup & Disaster Recovery", desc:"Business continuity and disaster recovery planning.", price:4999 },
-  { icon:"💸", name:"Cloud Cost Optimization", desc:"Reduce cloud spend and optimize usage.", price:3999 },
+{
+  category: "🚀 Trending AI & Productivity Tools",
+  items: [
+    { icon:"💖", name:"Lovable Pro – 1 Year", desc:"Premium AI productivity & automation tool." },
+    { icon:"🔄", name:"N8N – Automation Tool", desc:"Workflow automation & integrations." },
+    { icon:"⚡", name:"Gamma – AI Presentation Builder", desc:"AI-powered presentations." },
+    { icon:"🤖", name:"ChatGPT (Own Email) – 3 Months", desc:"ChatGPT on your own email." },
+    { icon:"🎙", name:"Descript – 1 Year", desc:"AI audio & video editing." },
+    { icon:"⚡", name:"Bolt.new – AI Code & Docs Tool", desc:"AI coding & documentation." },
+    { icon:"💼", name:"LinkedIn Premium – 3 Months", desc:"Profile & hiring insights." },
+    { icon:"🌐", name:"ClickSites – Website Builder", desc:"AI website & funnel builder." },
+    { icon:"✍", name:"Jasper AI – 1 Month", desc:"AI copywriting tool." },
+    { icon:"💻", name:"Replit Core – 1 Year", desc:"Cloud IDE with AI coding." },
+    { icon:"🖥", name:"Warp – AI Terminal", desc:"Modern AI-powered terminal." },
+    { icon:"🎨", name:"Mobbin – UI/UX Design Library", desc:"UI inspiration library." },
+    { icon:"🎭", name:"Magic Patterns – AI Design Tool", desc:"AI-generated UI components." },
+    { icon:"🎤", name:"Wispr – Voice AI", desc:"Voice & transcription AI." },
+    { icon:"🍳", name:"Granola – Meeting Notes AI", desc:"AI meeting summaries." },
+    { icon:"📧", name:"Superhuman – Smart Email", desc:"Fast AI email client." },
+    { icon:"📊", name:"Linear – AI Project Management", desc:"AI-powered issue tracking." },
+    { icon:"⚡", name:"Raycast – Productivity AI", desc:"Command bar with AI." },
+    { icon:"⚡", name:"BlackBox AI", desc:"AI coding assistant." }
+  ]
+},
 
-  // ===== IT SERVICES =====
-  { icon:"🛠️", name:"Managed IT Support", desc:"24/7 monitoring, helpdesk and proactive IT support.", price:4999 },
-  { icon:"🧭", name:"IT Consulting", desc:"Technology roadmap and strategic IT advisory.", price:2999 },
-  { icon:"🏢", name:"Enterprise IT Solutions", desc:"End-to-end IT solutions for enterprises.", price:14999 },
-  { icon:"🧩", name:"IT Infrastructure Management", desc:"Servers, networks, storage and endpoint management.", price:6999 },
-  { icon:"🔁", name:"IT Asset & License Management", desc:"Hardware, software and license lifecycle management.", price:1999 },
-  { icon:"🌐", name:"Network & Server Management", desc:"Secure and reliable network/server operations.", price:5999 },
+{
+  category: "🛠 Other Premium Tools & Subscriptions",
+  items: [
+    { icon:"🔹", name:"Make.com", desc:"Advanced automation platform." },
+    { icon:"🔹", name:"ChatGPT Plus – 3 Months", desc:"Official ChatGPT Plus." },
+    { icon:"🔹", name:"Canva Edu – 1 Year", desc:"Education Canva Pro." },
+    { icon:"🔹", name:"Adobe Creative Cloud – 1 Month", desc:"All Adobe apps." },
+    { icon:"🔹", name:"Adobe Creative Cloud – 1 Year", desc:"Annual Adobe plan." },
+    { icon:"🔹", name:"ElevenLabs Creator – 3 Months", desc:"AI voice generation." },
+    { icon:"🔹", name:"CorelDRAW Technical & Graphics Suite", desc:"Professional design suite." },
+    { icon:"🔹", name:"CapCut Pro – 1 Month", desc:"Premium video editing." },
+    { icon:"🔹", name:"ExpressVPN – 3 Months", desc:"Secure VPN service." },
+    { icon:"🔹", name:"Surfshark VPN – 2 Months", desc:"Affordable VPN." },
+    { icon:"🔹", name:"Notion Plus – 6 Months (AI)", desc:"Notion with AI." },
+    { icon:"🔹", name:"Coursera Plus – 1 Year", desc:"Unlimited courses." },
+    { icon:"🔹", name:"TradingView Premium – 1 Month", desc:"Advanced stock charts." },
+    { icon:"🔹", name:"Gemini Pro – 1 Year", desc:"Google AI plan." },
+    { icon:"🔹", name:"Perplexity AI – 1 Year", desc:"AI research engine." },
+    { icon:"🔹", name:"Grammarly – 1 Year", desc:"Writing assistant." },
+    { icon:"🔹", name:"QuillBot – 1 Year", desc:"Paraphrasing tool." },
+    { icon:"🔹", name:"Filmora – 1 Year", desc:"Video editing software." },
+    { icon:"🔹", name:"Envato Elements", desc:"Unlimited assets." },
+    { icon:"🔹", name:"Gemini AI Ultra – 1 Month", desc:"Advanced Gemini AI." },
+    { icon:"🔹", name:"CorelDRAW Lifetime 2024", desc:"Lifetime license." },
+    { icon:"🔹", name:"Autodesk – 1 / 3 Year", desc:"AutoCAD & tools." },
+    { icon:"🎁", name:"Canva Pro – 1 Year", desc:"Individual plan." },
+    { icon:"🎁", name:"Canva Pro – 500 Users (Admin)", desc:"Team admin panel." },
+    { icon:"🎁", name:"DataCamp", desc:"Data learning platform." },
+    { icon:"🎁", name:"CapCut Pro – Monthly", desc:"Monthly plan." }
+  ]
+};
 
-  // ===== CYBERSECURITY =====
-  { icon:"🔐", name:"Cybersecurity Consulting", desc:"Security strategy, risk assessment and planning.", price:4999 },
-  { icon:"🛡️", name:"SOC & Threat Monitoring", desc:"24/7 security monitoring and incident alerts.", price:9999 },
-  { icon:"📜", name:"Compliance & Security Audits", desc:"ISO, GDPR, SOC2 and regulatory compliance.", price:6999 },
-  { icon:"🧬", name:"Data Protection & Privacy", desc:"Encryption, access control and data security.", price:5999 },
-  { icon:"🚨", name:"Incident Response & Recovery", desc:"Security breach response and recovery.", price:7999 },
-  { icon:"🧪", name:"VAPT & Penetration Testing", desc:"Vulnerability assessment and penetration testing.", price:8999 },
+function renderServicesCategoryWise() {
+  const grid = document.getElementById("service-grid");
+  grid.innerHTML = "";
 
-  // ===== SOFTWARE & APP DEVELOPMENT =====
-  { icon:"💻", name:"Custom Software Development", desc:"Tailored enterprise and business software solutions.", price:12999 },
-  { icon:"🌐", name:"Web Application Development", desc:"Scalable and secure web applications.", price:7999 },
-  { icon:"📱", name:"App Development", desc:"Android & iOS apps tailored to business needs.", price:15000 },
-  { icon:"🧩", name:"API & System Integrations", desc:"Third-party API and enterprise system integration.", price:5999 },
-  { icon:"☁️", name:"SaaS Product Development", desc:"Cloud-based SaaS platforms and products.", price:19999 },
-  { icon:"🧪", name:"QA & Software Testing", desc:"Manual and automated testing services.", price:3999 },
+  serviceCategories.forEach(cat => {
+    grid.insertAdjacentHTML("beforeend", `
+      <div class="col-span-full text-center my-6">
+        <h3 class="category-title">${cat.category}</h3>
+        <div class="category-line"></div>
+      </div>
+    `);
 
-  // ===== WEBSITE & EXPERIENCE =====
-  { icon:"🌐", name:"Website Development", desc:"Professional, responsive business or e-commerce websites.", price:2999 },
-  { icon:"🛒", name:"E-Commerce Solutions", desc:"Shopify, WooCommerce and custom e-commerce platforms.", price:4999 },
-  { icon:"🎨", name:"UI / UX Design", desc:"User-centric interface and experience design.", price:2999 },
-  { icon:"⚡", name:"Website Performance Optimization", desc:"Speed, SEO and core web vitals optimization.", price:1999 },
-  { icon:"⚙️", name:"Website Maintenance & Support", desc:"Ongoing updates, bug fixes and uptime monitoring.", price:999 },
-  { icon:"📄", name:"Landing Page Development", desc:"High-converting landing pages.", price:1499 },
-
-  // ===== DIGITAL MARKETING =====
-  { icon:"📈", name:"Digital Marketing Strategy", desc:"End-to-end online growth strategy.", price:3999 },
-  { icon:"🔍", name:"SEO & SEM", desc:"Search engine optimization and paid marketing.", price:2999 },
-  { icon:"📢", name:"Social Media Management", desc:"Plan, post and manage social content.", price:2499 },
-  { icon:"✉️", name:"Email & WhatsApp Marketing", desc:"Automated and personalized campaigns.", price:1499 },
-  { icon:"🎥", name:"Video Editing & Reels Creation", desc:"Short videos and reels for engagement.", price:499 },
-  { icon:"📣", name:"Google Ads Setup & Management", desc:"Campaign setup, tracking and optimization.", price:3499 },
-
-  // ===== CREATIVE & BRANDING =====
-  { icon:"🎨", name:"Graphic & Logo Design", desc:"Custom logos, posters and brand creatives.", price:499 },
-  { icon:"🧾", name:"Brand Identity Design", desc:"Complete brand identity systems.", price:2999 },
-  { icon:"📊", name:"Pitch Deck & Presentation Design", desc:"Investor and sales presentations.", price:1999 },
-  { icon:"🖼️", name:"Ad Creatives & Banners", desc:"Marketing creatives for ads.", price:799 },
-  { icon:"🎬", name:"Promo & Explainer Videos", desc:"Short promotional and explainer videos.", price:2999 },
-  { icon:"📦", name:"Packaging & Print Design", desc:"Product packaging and print creatives.", price:1999 },
-
-  // ===== BUSINESS & CONSULTANCY =====
-  { icon:"🧠", name:"Business & IT Consultancy", desc:"Expert consultancy for business and tech growth.", price:999 },
-  { icon:"🚀", name:"Startup Consulting", desc:"Tech and growth consulting for startups.", price:2999 },
-  { icon:"🔄", name:"Digital Transformation Consulting", desc:"Modernize business with digital solutions.", price:4999 },
-  { icon:"⚙️", name:"Process Optimization", desc:"Improve efficiency and reduce costs.", price:1999 },
-  { icon:"📍", name:"Technology Roadmap Planning", desc:"Future-ready technology planning.", price:2999 },
-  { icon:"🤝", name:"Automation Consulting", desc:"Automation strategy and implementation.", price:2499 },
-
-  // ===== CSC / DIGITAL SEVA =====
-  { icon:"💼", name:"PF Withdrawal & Correction", desc:"EPF withdrawal, correction and KYC linking.", price:299 },
-  { icon:"💰", name:"IT & GST Services", desc:"ITR filing, GST registration and returns.", price:499 },
-  { icon:"🪪", name:"PAN Card Services", desc:"Apply, update or reprint PAN card.", price:150 },
-  { icon:"🆔", name:"Aadhaar Update", desc:"Aadhaar name, address or mobile update.", price:199 },
-  { icon:"🏢", name:"MSME Registration", desc:"Udyam / MSME registration services.", price:299 },
-  { icon:"🛂", name:"Passport Services", desc:"Apply or renew passport with verification.", price:999 },
-
-  // ===== GOVERNMENT & UTILITY =====
-  { icon:"✈️", name:"Travel & Ticket Booking", desc:"IRCTC train, flight, hotel or visa assistance.", price:99 },
-  { icon:"🌍", name:"Visa Assistance", desc:"Tourist and business visa support.", price:1999 },
-  { icon:"🧾", name:"Online Form Filling", desc:"Government and private online forms.", price:99 },
-  { icon:"💡", name:"Bill Payments & Recharge", desc:"Electricity, gas, mobile and DTH payments.", price:49 },
-  { icon:"📜", name:"Digital Certificates & Documents", desc:"Income, caste and other certificates.", price:299 },
-  { icon:"📝", name:"Notary & Documentation Support", desc:"Legal and documentation assistance.", price:499 }
-];
-
-
-  function renderServices() {
-    const grid = document.getElementById('service-grid');
-    if (!grid) return;
-    services.forEach(s => {
-      const upiLink = `${upiBase}&am=${s.price}&tn=${encodeURIComponent(s.name)}`;
-      const chatLink = `https://wa.me/${whatsappNumber}?text=Hi! I am interested in ${encodeURIComponent(s.name)}`;
-      // Share link/text for Web Share API or fallback
-      const shareText = `Check out this service: ${s.name} - ${s.desc}. Starting at ₹${s.price}. Powered by NexAI Tech & Digital Solutions.`;
-
-      const div = document.createElement('div');
-      div.className = "bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition";
-      div.innerHTML = `
-        <div class='text-4xl mb-4'>${s.icon}</div>
-        <h3 class='text-xl font-bold mb-2'>${s.name}</h3>
-        <p class='text-gray-600 text-sm mb-3'>${s.desc}</p>
-        <p class='text-indigo-700 font-semibold mb-4'>Starting ₹${s.price}</p>
-        <div class='flex flex-wrap gap-2 items-center'>
-          <a href='${upiLink}' target='_blank' 
-             class='bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
-             Buy Now
+    cat.items.forEach(s => {
+      const chat = `https://wa.me/${whatsappNumber}?text=Hi! I want ${encodeURIComponent(s.name)}`;
+      grid.insertAdjacentHTML("beforeend", `
+        <div class="bg-indigo-50 p-6 rounded-xl shadow hover:shadow-xl transition">
+          <div class="text-4xl mb-3">${s.icon}</div>
+          <h4 class="font-semibold text-lg">${s.name}</h4>
+          <p class="text-sm text-gray-600 mb-4">${s.desc}</p>
+          <a href="${chat}" target="_blank"
+            class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+            💬 DM Now
           </a>
-          <a href='${chatLink}' target='_blank'
-             class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
-             💬 Chat
-          </a>
-          <button onclick="shareService('${s.name}', '${s.desc}', '${s.price}')"
-              class='bg-gray-400 hover:bg-gray-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition'>
-              🔗 Share
-          </button>
         </div>
-      `;
-      grid.appendChild(div);
+      `);
     });
-  }
+  });
+}
 
-  function shareService(name, desc, price) {
-      const shareData = {
-          title: 'NexAI Service: ' + name,
-          text: `Check out this service: ${name} - ${desc}. Starting at ₹${price}. Get in touch now!`,
-          url: window.location.href // Shares the current page link
-      };
-
-      if (navigator.share) {
-          navigator.share(shareData)
-              .catch((error) => console.log('Error sharing', error));
-      } else {
-          // Fallback for browsers that do not support Web Share API
-          alert(`Share this service: ${shareData.text}\nPage URL: ${shareData.url}\n\n(Note: Your browser does not support the native Share feature, please copy and paste the details.)`);
-      }
-  }
-
-
-  document.addEventListener("DOMContentLoaded", renderServices);
+document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
 </script>
+
   <script>
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
