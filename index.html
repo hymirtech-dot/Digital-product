@@ -644,62 +644,27 @@ const whatsappNumber = "919464642218";
 
 const serviceCategories = [
 
-{
-  category: "🚀 Trending AI & Productivity Tools",
-  items: [
-    { icon:"💖", name:"Lovable Pro – 1 Year", desc:"Premium AI productivity & automation tool." },
-    { icon:"🔄", name:"N8N – Automation Tool", desc:"Workflow automation & integrations." },
-    { icon:"⚡", name:"Gamma – AI Presentation Builder", desc:"AI-powered presentations." },
-    { icon:"🤖", name:"ChatGPT (Own Email) – 3 Months", desc:"ChatGPT on your own email." },
-    { icon:"🎙", name:"Descript – 1 Year", desc:"AI audio & video editing." },
-    { icon:"⚡", name:"Bolt.new – AI Code & Docs Tool", desc:"AI coding & documentation." },
-    { icon:"💼", name:"LinkedIn Premium – 3 Months", desc:"Profile & hiring insights." },
-    { icon:"🌐", name:"ClickSites – Website Builder", desc:"AI website & funnel builder." },
-    { icon:"✍", name:"Jasper AI – 1 Month", desc:"AI copywriting tool." },
-    { icon:"💻", name:"Replit Core – 1 Year", desc:"Cloud IDE with AI coding." },
-    { icon:"🖥", name:"Warp – AI Terminal", desc:"Modern AI-powered terminal." },
-    { icon:"🎨", name:"Mobbin – UI/UX Design Library", desc:"UI inspiration library." },
-    { icon:"🎭", name:"Magic Patterns – AI Design Tool", desc:"AI-generated UI components." },
-    { icon:"🎤", name:"Wispr – Voice AI", desc:"Voice & transcription AI." },
-    { icon:"🍳", name:"Granola – Meeting Notes AI", desc:"AI meeting summaries." },
-    { icon:"📧", name:"Superhuman – Smart Email", desc:"Fast AI email client." },
-    { icon:"📊", name:"Linear – AI Project Management", desc:"AI-powered issue tracking." },
-    { icon:"⚡", name:"Raycast – Productivity AI", desc:"Command bar with AI." },
-    { icon:"⚡", name:"BlackBox AI", desc:"AI coding assistant." }
-  ]
-},
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("service");
+  if (!select) return;
 
-{
-  category: "🛠 Other Premium Tools & Subscriptions",
-  items: [
-    { icon:"🔹", name:"Make.com", desc:"Advanced automation platform." },
-    { icon:"🔹", name:"ChatGPT Plus – 3 Months", desc:"Official ChatGPT Plus." },
-    { icon:"🔹", name:"Canva Edu – 1 Year", desc:"Education Canva Pro." },
-    { icon:"🔹", name:"Adobe Creative Cloud – 1 Month", desc:"All Adobe apps." },
-    { icon:"🔹", name:"Adobe Creative Cloud – 1 Year", desc:"Annual Adobe plan." },
-    { icon:"🔹", name:"ElevenLabs Creator – 3 Months", desc:"AI voice generation." },
-    { icon:"🔹", name:"CorelDRAW Technical & Graphics Suite", desc:"Professional design suite." },
-    { icon:"🔹", name:"CapCut Pro – 1 Month", desc:"Premium video editing." },
-    { icon:"🔹", name:"ExpressVPN – 3 Months", desc:"Secure VPN service." },
-    { icon:"🔹", name:"Surfshark VPN – 2 Months", desc:"Affordable VPN." },
-    { icon:"🔹", name:"Notion Plus – 6 Months (AI)", desc:"Notion with AI." },
-    { icon:"🔹", name:"Coursera Plus – 1 Year", desc:"Unlimited courses." },
-    { icon:"🔹", name:"TradingView Premium – 1 Month", desc:"Advanced stock charts." },
-    { icon:"🔹", name:"Gemini Pro – 1 Year", desc:"Google AI plan." },
-    { icon:"🔹", name:"Perplexity AI – 1 Year", desc:"AI research engine." },
-    { icon:"🔹", name:"Grammarly – 1 Year", desc:"Writing assistant." },
-    { icon:"🔹", name:"QuillBot – 1 Year", desc:"Paraphrasing tool." },
-    { icon:"🔹", name:"Filmora – 1 Year", desc:"Video editing software." },
-    { icon:"🔹", name:"Envato Elements", desc:"Unlimited assets." },
-    { icon:"🔹", name:"Gemini AI Ultra – 1 Month", desc:"Advanced Gemini AI." },
-    { icon:"🔹", name:"CorelDRAW Lifetime 2024", desc:"Lifetime license." },
-    { icon:"🔹", name:"Autodesk – 1 / 3 Year", desc:"AutoCAD & tools." },
-    { icon:"🎁", name:"Canva Pro – 1 Year", desc:"Individual plan." },
-    { icon:"🎁", name:"Canva Pro – 500 Users (Admin)", desc:"Team admin panel." },
-    { icon:"🎁", name:"DataCamp", desc:"Data learning platform." },
-    { icon:"🎁", name:"CapCut Pro – Monthly", desc:"Monthly plan." }
-  ]
-};
+  serviceCategories.forEach(cat => {
+    const group = document.createElement("optgroup");
+    group.label = cat.category;
+
+    cat.items.forEach(item => {
+      const option = document.createElement("option");
+      option.value = item.name;
+      option.textContent = item.name;
+      group.appendChild(option);
+    });
+
+    select.appendChild(group);
+  });
+});
+</script>
+
 
 function renderServicesCategoryWise() {
   const grid = document.getElementById("service-grid");
