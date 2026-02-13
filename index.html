@@ -495,93 +495,28 @@ document.addEventListener("DOMContentLoaded", renderServicesCategoryWise);
         <select id="service" class="border border-gray-300 rounded-lg w-full p-3 mb-4 focus:ring-2 focus:ring-indigo-500">
           <option value="">-- Choose a Service --</option>
        <!-- ===== AI & AUTOMATION ===== -->
-<option>AI Automation Setup</option>
-<option>AI Chatbots & Virtual Assistants</option>
-<option>Machine Learning Solutions</option>
-<option>Predictive Analytics</option>
-<option>Computer Vision & OCR</option>
-<option>NLP Solutions</option>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceSelect = document.getElementById("service");
 
-<!-- ===== CLOUD & DEVOPS ===== -->
-<option>Cloud Migration</option>
-<option>AWS / Azure / GCP Solutions</option>
-<option>DevOps & CI/CD Pipelines</option>
-<option>Containerization & Kubernetes</option>
-<option>Backup & Disaster Recovery</option>
-<option>Cloud Cost Optimization</option>
+  if (!serviceSelect) return;
 
-<!-- ===== IT SERVICES ===== -->
-<option>Managed IT Support</option>
-<option>IT Consulting</option>
-<option>Enterprise IT Solutions</option>
-<option>IT Infrastructure Management</option>
-<option>Network & Server Management</option>
-<option>IT Asset & License Management</option>
+  serviceCategories.forEach(category => {
+    // Category label (disabled)
+    const optGroup = document.createElement("optgroup");
+    optGroup.label = category.category;
 
-<!-- ===== CYBERSECURITY ===== -->
-<option>Cybersecurity Consulting</option>
-<option>SOC & Threat Monitoring</option>
-<option>Compliance & Security Audits</option>
-<option>Data Protection & Privacy</option>
-<option>VAPT & Penetration Testing</option>
-<option>Incident Response & Recovery</option>
+    category.items.forEach(item => {
+      const option = document.createElement("option");
+      option.value = item.name;
+      option.textContent = item.name;
+      optGroup.appendChild(option);
+    });
 
-<!-- ===== SOFTWARE & APP DEVELOPMENT ===== -->
-<option>Custom Software Development</option>
-<option>Web Application Development</option>
-<option>App Development (Android & iOS)</option>
-<option>SaaS Product Development</option>
-<option>API & System Integrations</option>
-<option>QA & Software Testing</option>
-
-<!-- ===== WEBSITE & EXPERIENCE ===== -->
-<option>Website Development</option>
-<option>E-Commerce Solutions</option>
-<option>UI / UX Design</option>
-<option>Website Performance Optimization</option>
-<option>Website Maintenance & Support</option>
-<option>Landing Page Development</option>
-
-<!-- ===== DIGITAL MARKETING ===== -->
-<option>Digital Marketing Strategy</option>
-<option>SEO & SEM</option>
-<option>Google Ads Setup & Management</option>
-<option>Social Media Management</option>
-<option>Email & WhatsApp Marketing</option>
-<option>Video Editing & Reels Creation</option>
-
-<!-- ===== CREATIVE & BRANDING ===== -->
-<option>Graphic & Logo Design</option>
-<option>Brand Identity Design</option>
-<option>Ad Creatives & Banners</option>
-<option>Pitch Deck & Presentation Design</option>
-<option>Promo & Explainer Videos</option>
-<option>Packaging & Print Design</option>
-
-<!-- ===== BUSINESS & CONSULTANCY ===== -->
-<option>Business & IT Consultancy</option>
-<option>Startup Consulting</option>
-<option>Digital Transformation Consulting</option>
-<option>Process Optimization</option>
-<option>Automation Consulting</option>
-<option>Technology Roadmap Planning</option>
-
-<!-- ===== CSC / DIGITAL SEVA ===== -->
-<option>PF Withdrawal & Correction</option>
-<option>ITR Filing</option>
-<option>IT & GST Services</option>
-<option>PAN Card Services</option>
-<option>Aadhaar Update</option>
-<option>MSME / Udyam Registration</option>
-
-<!-- ===== GOVERNMENT & UTILITY ===== -->
-<option>Passport Services</option>
-<option>Travel & Ticket Booking</option>
-<option>Visa Assistance</option>
-<option>Online Form Filling</option>
-<option>Bill Payments & Recharge</option>
-<option>Digital Certificates & Documentation</option>
-<option>Notary & Documentation Support</option>
+    serviceSelect.appendChild(optGroup);
+  });
+});
+</script>
 
 <!-- ===== OTHER ===== -->
 <option>Other / Custom Requirement</option>
